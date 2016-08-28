@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kaeru
 
 final class ViewController: UIViewController {
     class func instance() -> UIViewController {
@@ -42,7 +43,7 @@ final class ViewController: UIViewController {
     
     @IBAction func showViewerButtonPressed(sender: AnyObject) {
         guard let navigationController = navigationController as? HistoryNavigationController else {
-            return
+            fatalError()
         }
         
         navigationController.showViewer()

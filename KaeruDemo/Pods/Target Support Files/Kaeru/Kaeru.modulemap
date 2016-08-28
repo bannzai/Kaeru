@@ -1,0 +1,6 @@
+framework module Kaeru {
+  umbrella header "Kaeru-umbrella.h"
+
+  export *
+  module * { export * }
+}

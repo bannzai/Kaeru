@@ -1,518 +1,1172 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		9CBC77B41D731D6600B9DE7A /* KaeruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC77B31D731D6600B9DE7A /* KaeruTests.swift */; };
-		9CBC77BF1D731D6600B9DE7A /* KaeruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC77BE1D731D6600B9DE7A /* KaeruUITests.swift */; };
-		9CBC78301D7321B400B9DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC78281D7321B400B9DE7A /* AppDelegate.swift */; };
-		9CBC78311D7321B400B9DE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC78291D7321B400B9DE7A /* Assets.xcassets */; };
-		9CBC78321D7321B400B9DE7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC782A1D7321B400B9DE7A /* LaunchScreen.storyboard */; };
-		9CBC78331D7321B400B9DE7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC782C1D7321B400B9DE7A /* Main.storyboard */; };
-		9CBC78341D7321B400B9DE7A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC782E1D7321B400B9DE7A /* Info.plist */; };
-		9CBC78351D7321B400B9DE7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC782F1D7321B400B9DE7A /* ViewController.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9CBC77B01D731D6600B9DE7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CBC77931D731D6600B9DE7A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CBC779A1D731D6600B9DE7A;
-			remoteInfo = Kaeru;
-		};
-		9CBC77BB1D731D6600B9DE7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CBC77931D731D6600B9DE7A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CBC779A1D731D6600B9DE7A;
-			remoteInfo = Kaeru;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		9CBC779B1D731D6600B9DE7A /* Kaeru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaeru.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CBC77AF1D731D6600B9DE7A /* KaeruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaeruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CBC77B31D731D6600B9DE7A /* KaeruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaeruTests.swift; sourceTree = "<group>"; };
-		9CBC77B51D731D6600B9DE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CBC77BA1D731D6600B9DE7A /* KaeruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaeruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CBC77BE1D731D6600B9DE7A /* KaeruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaeruUITests.swift; sourceTree = "<group>"; };
-		9CBC77C01D731D6600B9DE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CBC78281D7321B400B9DE7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CBC78291D7321B400B9DE7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9CBC782B1D7321B400B9DE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9CBC782D1D7321B400B9DE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9CBC782E1D7321B400B9DE7A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CBC782F1D7321B400B9DE7A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		9CBC77981D731D6600B9DE7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CBC77AC1D731D6600B9DE7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CBC77B71D731D6600B9DE7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		9CBC77921D731D6600B9DE7A = {
-			isa = PBXGroup;
-			children = (
-				9CBC77F21D731DDD00B9DE7A /* KaeruDemo */,
-				9CBC77B21D731D6600B9DE7A /* KaeruTests */,
-				9CBC77BD1D731D6600B9DE7A /* KaeruUITests */,
-				9CBC779C1D731D6600B9DE7A /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		9CBC779C1D731D6600B9DE7A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9CBC779B1D731D6600B9DE7A /* Kaeru.app */,
-				9CBC77AF1D731D6600B9DE7A /* KaeruTests.xctest */,
-				9CBC77BA1D731D6600B9DE7A /* KaeruUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9CBC77B21D731D6600B9DE7A /* KaeruTests */ = {
-			isa = PBXGroup;
-			children = (
-				9CBC77B31D731D6600B9DE7A /* KaeruTests.swift */,
-				9CBC77B51D731D6600B9DE7A /* Info.plist */,
-			);
-			path = KaeruTests;
-			sourceTree = "<group>";
-		};
-		9CBC77BD1D731D6600B9DE7A /* KaeruUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9CBC77BE1D731D6600B9DE7A /* KaeruUITests.swift */,
-				9CBC77C01D731D6600B9DE7A /* Info.plist */,
-			);
-			path = KaeruUITests;
-			sourceTree = "<group>";
-		};
-		9CBC77F21D731DDD00B9DE7A /* KaeruDemo */ = {
-			isa = PBXGroup;
-			children = (
-				9CBC78271D7321B400B9DE7A /* KaeruDemo */,
-			);
-			path = KaeruDemo;
-			sourceTree = "<group>";
-		};
-		9CBC78271D7321B400B9DE7A /* KaeruDemo */ = {
-			isa = PBXGroup;
-			children = (
-				9CBC78281D7321B400B9DE7A /* AppDelegate.swift */,
-				9CBC78291D7321B400B9DE7A /* Assets.xcassets */,
-				9CBC782A1D7321B400B9DE7A /* LaunchScreen.storyboard */,
-				9CBC782C1D7321B400B9DE7A /* Main.storyboard */,
-				9CBC782E1D7321B400B9DE7A /* Info.plist */,
-				9CBC782F1D7321B400B9DE7A /* ViewController.swift */,
-			);
-			name = KaeruDemo;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		9CBC779A1D731D6600B9DE7A /* Kaeru */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CBC77C31D731D6600B9DE7A /* Build configuration list for PBXNativeTarget "Kaeru" */;
-			buildPhases = (
-				9CBC77971D731D6600B9DE7A /* Sources */,
-				9CBC77981D731D6600B9DE7A /* Frameworks */,
-				9CBC77991D731D6600B9DE7A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Kaeru;
-			productName = Kaeru;
-			productReference = 9CBC779B1D731D6600B9DE7A /* Kaeru.app */;
-			productType = "com.apple.product-type.application";
-		};
-		9CBC77AE1D731D6600B9DE7A /* KaeruTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CBC77C61D731D6600B9DE7A /* Build configuration list for PBXNativeTarget "KaeruTests" */;
-			buildPhases = (
-				9CBC77AB1D731D6600B9DE7A /* Sources */,
-				9CBC77AC1D731D6600B9DE7A /* Frameworks */,
-				9CBC77AD1D731D6600B9DE7A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9CBC77B11D731D6600B9DE7A /* PBXTargetDependency */,
-			);
-			name = KaeruTests;
-			productName = KaeruTests;
-			productReference = 9CBC77AF1D731D6600B9DE7A /* KaeruTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9CBC77B91D731D6600B9DE7A /* KaeruUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CBC77C91D731D6600B9DE7A /* Build configuration list for PBXNativeTarget "KaeruUITests" */;
-			buildPhases = (
-				9CBC77B61D731D6600B9DE7A /* Sources */,
-				9CBC77B71D731D6600B9DE7A /* Frameworks */,
-				9CBC77B81D731D6600B9DE7A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9CBC77BC1D731D6600B9DE7A /* PBXTargetDependency */,
-			);
-			name = KaeruUITests;
-			productName = KaeruUITests;
-			productReference = 9CBC77BA1D731D6600B9DE7A /* KaeruUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		9CBC77931D731D6600B9DE7A /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = kingkong999yhirose;
-				TargetAttributes = {
-					9CBC779A1D731D6600B9DE7A = {
-						CreatedOnToolsVersion = 7.3;
-					};
-					9CBC77AE1D731D6600B9DE7A = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 9CBC779A1D731D6600B9DE7A;
-					};
-					9CBC77B91D731D6600B9DE7A = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 9CBC779A1D731D6600B9DE7A;
-					};
-				};
-			};
-			buildConfigurationList = 9CBC77961D731D6600B9DE7A /* Build configuration list for PBXProject "Kaeru" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 9CBC77921D731D6600B9DE7A;
-			productRefGroup = 9CBC779C1D731D6600B9DE7A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				9CBC779A1D731D6600B9DE7A /* Kaeru */,
-				9CBC77AE1D731D6600B9DE7A /* KaeruTests */,
-				9CBC77B91D731D6600B9DE7A /* KaeruUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		9CBC77991D731D6600B9DE7A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CBC78321D7321B400B9DE7A /* LaunchScreen.storyboard in Resources */,
-				9CBC78311D7321B400B9DE7A /* Assets.xcassets in Resources */,
-				9CBC78341D7321B400B9DE7A /* Info.plist in Resources */,
-				9CBC78331D7321B400B9DE7A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CBC77AD1D731D6600B9DE7A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CBC77B81D731D6600B9DE7A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		9CBC77971D731D6600B9DE7A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CBC78301D7321B400B9DE7A /* AppDelegate.swift in Sources */,
-				9CBC78351D7321B400B9DE7A /* ViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CBC77AB1D731D6600B9DE7A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CBC77B41D731D6600B9DE7A /* KaeruTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CBC77B61D731D6600B9DE7A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CBC77BF1D731D6600B9DE7A /* KaeruUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9CBC77B11D731D6600B9DE7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9CBC779A1D731D6600B9DE7A /* Kaeru */;
-			targetProxy = 9CBC77B01D731D6600B9DE7A /* PBXContainerItemProxy */;
-		};
-		9CBC77BC1D731D6600B9DE7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9CBC779A1D731D6600B9DE7A /* Kaeru */;
-			targetProxy = 9CBC77BB1D731D6600B9DE7A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9CBC782A1D7321B400B9DE7A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CBC782B1D7321B400B9DE7A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		9CBC782C1D7321B400B9DE7A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CBC782D1D7321B400B9DE7A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		9CBC77C11D731D6600B9DE7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		9CBC77C21D731D6600B9DE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9CBC77C41D731D6600B9DE7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = KaeruDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.Kaeru;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9CBC77C51D731D6600B9DE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = KaeruDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.Kaeru;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		9CBC77C71D731D6600B9DE7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = KaeruTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaeru.app/Kaeru";
-			};
-			name = Debug;
-		};
-		9CBC77C81D731D6600B9DE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = KaeruTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaeru.app/Kaeru";
-			};
-			name = Release;
-		};
-		9CBC77CA1D731D6600B9DE7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = KaeruUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Kaeru;
-			};
-			name = Debug;
-		};
-		9CBC77CB1D731D6600B9DE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = KaeruUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Kaeru;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		9CBC77961D731D6600B9DE7A /* Build configuration list for PBXProject "Kaeru" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CBC77C11D731D6600B9DE7A /* Debug */,
-				9CBC77C21D731D6600B9DE7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9CBC77C31D731D6600B9DE7A /* Build configuration list for PBXNativeTarget "Kaeru" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CBC77C41D731D6600B9DE7A /* Debug */,
-				9CBC77C51D731D6600B9DE7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9CBC77C61D731D6600B9DE7A /* Build configuration list for PBXNativeTarget "KaeruTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CBC77C71D731D6600B9DE7A /* Debug */,
-				9CBC77C81D731D6600B9DE7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9CBC77C91D731D6600B9DE7A /* Build configuration list for PBXNativeTarget "KaeruUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CBC77CA1D731D6600B9DE7A /* Debug */,
-				9CBC77CB1D731D6600B9DE7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 9CBC77931D731D6600B9DE7A /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0455457A34AD9D0A3BCB6674</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_Kaeru.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1E0622C6ED50C4225502B21D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>27AE650F3023B5164C171499</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Kaeru.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Kaeru/Pods-Kaeru.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>27EEA5D863BBCAA54A37027B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0455457A34AD9D0A3BCB6674</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>42B4E76A15E515F88EB5F0E8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Kaeru.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Kaeru/Pods-Kaeru.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7EE6F12E817592BE48296E3A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9BD604BA670AF43B5450FA0A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77921D731D6600B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC77F21D731DDD00B9DE7A</string>
+				<string>9CBC77B21D731D6600B9DE7A</string>
+				<string>9CBC77BD1D731D6600B9DE7A</string>
+				<string>9CBC779C1D731D6600B9DE7A</string>
+				<string>CC7C5F2316D8BAB7539656A0</string>
+				<string>E388E061964334092981CD61</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77931D731D6600B9DE7A</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>kingkong999yhirose</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>9CBC779A1D731D6600B9DE7A</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+					</dict>
+					<key>9CBC77AE1D731D6600B9DE7A</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>9CBC779A1D731D6600B9DE7A</string>
+					</dict>
+					<key>9CBC77B91D731D6600B9DE7A</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>9CBC779A1D731D6600B9DE7A</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>9CBC77961D731D6600B9DE7A</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>9CBC77921D731D6600B9DE7A</string>
+			<key>productRefGroup</key>
+			<string>9CBC779C1D731D6600B9DE7A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>9CBC779A1D731D6600B9DE7A</string>
+				<string>9CBC77AE1D731D6600B9DE7A</string>
+				<string>9CBC77B91D731D6600B9DE7A</string>
+			</array>
+		</dict>
+		<key>9CBC77961D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9CBC77C11D731D6600B9DE7A</string>
+				<string>9CBC77C21D731D6600B9DE7A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9CBC77971D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9CBC78301D7321B400B9DE7A</string>
+				<string>9CBC78351D7321B400B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77981D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>27EEA5D863BBCAA54A37027B</string>
+				<string>B8BFB842F4BFB675D32FE2F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77991D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9CBC78321D7321B400B9DE7A</string>
+				<string>9CBC78311D7321B400B9DE7A</string>
+				<string>9CBC78341D7321B400B9DE7A</string>
+				<string>9CBC78331D7321B400B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC779A1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9CBC77C31D731D6600B9DE7A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9BD604BA670AF43B5450FA0A</string>
+				<string>9CBC77971D731D6600B9DE7A</string>
+				<string>9CBC77981D731D6600B9DE7A</string>
+				<string>9CBC77991D731D6600B9DE7A</string>
+				<string>1E0622C6ED50C4225502B21D</string>
+				<string>AB82051E8CE8043E221A0E29</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Kaeru</string>
+			<key>productName</key>
+			<string>Kaeru</string>
+			<key>productReference</key>
+			<string>9CBC779B1D731D6600B9DE7A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>9CBC779B1D731D6600B9DE7A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Kaeru.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9CBC779C1D731D6600B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC779B1D731D6600B9DE7A</string>
+				<string>9CBC77AF1D731D6600B9DE7A</string>
+				<string>9CBC77BA1D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77AB1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9CBC77B41D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77AC1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77AD1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77AE1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9CBC77C61D731D6600B9DE7A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9CBC77AB1D731D6600B9DE7A</string>
+				<string>9CBC77AC1D731D6600B9DE7A</string>
+				<string>9CBC77AD1D731D6600B9DE7A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>9CBC77B11D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>KaeruTests</string>
+			<key>productName</key>
+			<string>KaeruTests</string>
+			<key>productReference</key>
+			<string>9CBC77AF1D731D6600B9DE7A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>9CBC77AF1D731D6600B9DE7A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>KaeruTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9CBC77B01D731D6600B9DE7A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>9CBC77931D731D6600B9DE7A</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>9CBC779A1D731D6600B9DE7A</string>
+			<key>remoteInfo</key>
+			<string>Kaeru</string>
+		</dict>
+		<key>9CBC77B11D731D6600B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>9CBC779A1D731D6600B9DE7A</string>
+			<key>targetProxy</key>
+			<string>9CBC77B01D731D6600B9DE7A</string>
+		</dict>
+		<key>9CBC77B21D731D6600B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC77B31D731D6600B9DE7A</string>
+				<string>9CBC77B51D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>KaeruTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77B31D731D6600B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>KaeruTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77B41D731D6600B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC77B31D731D6600B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC77B51D731D6600B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77B61D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9CBC77BF1D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77B71D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77B81D731D6600B9DE7A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9CBC77B91D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9CBC77C91D731D6600B9DE7A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9CBC77B61D731D6600B9DE7A</string>
+				<string>9CBC77B71D731D6600B9DE7A</string>
+				<string>9CBC77B81D731D6600B9DE7A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>9CBC77BC1D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>KaeruUITests</string>
+			<key>productName</key>
+			<string>KaeruUITests</string>
+			<key>productReference</key>
+			<string>9CBC77BA1D731D6600B9DE7A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>9CBC77BA1D731D6600B9DE7A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>KaeruUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9CBC77BB1D731D6600B9DE7A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>9CBC77931D731D6600B9DE7A</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>9CBC779A1D731D6600B9DE7A</string>
+			<key>remoteInfo</key>
+			<string>Kaeru</string>
+		</dict>
+		<key>9CBC77BC1D731D6600B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>9CBC779A1D731D6600B9DE7A</string>
+			<key>targetProxy</key>
+			<string>9CBC77BB1D731D6600B9DE7A</string>
+		</dict>
+		<key>9CBC77BD1D731D6600B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC77BE1D731D6600B9DE7A</string>
+				<string>9CBC77C01D731D6600B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>KaeruUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77BE1D731D6600B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>KaeruUITests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77BF1D731D6600B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC77BE1D731D6600B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC77C01D731D6600B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC77C11D731D6600B9DE7A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9CBC77C21D731D6600B9DE7A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9CBC77C31D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9CBC77C41D731D6600B9DE7A</string>
+				<string>9CBC77C51D731D6600B9DE7A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9CBC77C41D731D6600B9DE7A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>42B4E76A15E515F88EB5F0E8</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KaeruDemo/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sample.Kaeru</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9CBC77C51D731D6600B9DE7A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>27AE650F3023B5164C171499</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KaeruDemo/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sample.Kaeru</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9CBC77C61D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9CBC77C71D731D6600B9DE7A</string>
+				<string>9CBC77C81D731D6600B9DE7A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9CBC77C71D731D6600B9DE7A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KaeruTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sample.KaeruTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Kaeru.app/Kaeru</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9CBC77C81D731D6600B9DE7A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KaeruTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sample.KaeruTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Kaeru.app/Kaeru</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9CBC77C91D731D6600B9DE7A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9CBC77CA1D731D6600B9DE7A</string>
+				<string>9CBC77CB1D731D6600B9DE7A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>9CBC77CA1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>KaeruUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sample.KaeruUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>Kaeru</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9CBC77CB1D731D6600B9DE7A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>KaeruUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.sample.KaeruUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>Kaeru</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9CBC77F21D731DDD00B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC78271D7321B400B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>KaeruDemo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC78271D7321B400B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC78281D7321B400B9DE7A</string>
+				<string>9CBC78291D7321B400B9DE7A</string>
+				<string>9CBC782A1D7321B400B9DE7A</string>
+				<string>9CBC782C1D7321B400B9DE7A</string>
+				<string>9CBC782E1D7321B400B9DE7A</string>
+				<string>9CBC782F1D7321B400B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>KaeruDemo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC78281D7321B400B9DE7A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC78291D7321B400B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC782A1D7321B400B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC782B1D7321B400B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC782B1D7321B400B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC782C1D7321B400B9DE7A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CBC782D1D7321B400B9DE7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC782D1D7321B400B9DE7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC782E1D7321B400B9DE7A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC782F1D7321B400B9DE7A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CBC78301D7321B400B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC78281D7321B400B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC78311D7321B400B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC78291D7321B400B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC78321D7321B400B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC782A1D7321B400B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC78331D7321B400B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC782C1D7321B400B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC78341D7321B400B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC782E1D7321B400B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CBC78351D7321B400B9DE7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CBC782F1D7321B400B9DE7A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB82051E8CE8043E221A0E29</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B8BFB842F4BFB675D32FE2F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7EE6F12E817592BE48296E3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CC7C5F2316D8BAB7539656A0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>42B4E76A15E515F88EB5F0E8</string>
+				<string>27AE650F3023B5164C171499</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E388E061964334092981CD61</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0455457A34AD9D0A3BCB6674</string>
+				<string>7EE6F12E817592BE48296E3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>9CBC77931D731D6600B9DE7A</string>
+</dict>
+</plist>
