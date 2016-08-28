@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AB7836F665E14A7BDD29387F'
+               BlueprintIdentifier = 'B341B165625005E1F147B70E'
                BlueprintName = 'Kaeru'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Kaeru.framework'>
