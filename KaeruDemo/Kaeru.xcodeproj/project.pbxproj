@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		9CBC77B41D731D6600B9DE7A /* KaeruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC77B31D731D6600B9DE7A /* KaeruTests.swift */; };
 		9CBC77BF1D731D6600B9DE7A /* KaeruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC77BE1D731D6600B9DE7A /* KaeruUITests.swift */; };
-		9CBC781E1D731DFD00B9DE7A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC78171D731DFD00B9DE7A /* CollectionView.swift */; };
-		9CBC781F1D731DFD00B9DE7A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC78181D731DFD00B9DE7A /* CollectionViewCell.swift */; };
-		9CBC78201D731DFD00B9DE7A /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC78191D731DFD00B9DE7A /* CollectionViewCell.xib */; };
-		9CBC78211D731DFD00B9DE7A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC781A1D731DFD00B9DE7A /* CollectionViewController.swift */; };
-		9CBC78221D731DFD00B9DE7A /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC781B1D731DFD00B9DE7A /* CustomTransition.swift */; };
-		9CBC78231D731DFD00B9DE7A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC781C1D731DFD00B9DE7A /* Helper.swift */; };
-		9CBC78241D731DFD00B9DE7A /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC781D1D731DFD00B9DE7A /* HistoryNavigationController.swift */; };
 		9CBC78301D7321B400B9DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC78281D7321B400B9DE7A /* AppDelegate.swift */; };
 		9CBC78311D7321B400B9DE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC78291D7321B400B9DE7A /* Assets.xcassets */; };
 		9CBC78321D7321B400B9DE7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBC782A1D7321B400B9DE7A /* LaunchScreen.storyboard */; };
@@ -49,13 +42,6 @@
 		9CBC77BA1D731D6600B9DE7A /* KaeruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaeruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBC77BE1D731D6600B9DE7A /* KaeruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaeruUITests.swift; sourceTree = "<group>"; };
 		9CBC77C01D731D6600B9DE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CBC78171D731DFD00B9DE7A /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
-		9CBC78181D731DFD00B9DE7A /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		9CBC78191D731DFD00B9DE7A /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		9CBC781A1D731DFD00B9DE7A /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		9CBC781B1D731DFD00B9DE7A /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
-		9CBC781C1D731DFD00B9DE7A /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		9CBC781D1D731DFD00B9DE7A /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 		9CBC78281D7321B400B9DE7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CBC78291D7321B400B9DE7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CBC782B1D7321B400B9DE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +78,6 @@
 		9CBC77921D731D6600B9DE7A = {
 			isa = PBXGroup;
 			children = (
-				9CBC78161D731DFD00B9DE7A /* Kaeru */,
 				9CBC77F21D731DDD00B9DE7A /* KaeruDemo */,
 				9CBC77B21D731D6600B9DE7A /* KaeruTests */,
 				9CBC77BD1D731D6600B9DE7A /* KaeruUITests */,
@@ -134,21 +119,6 @@
 				9CBC78271D7321B400B9DE7A /* KaeruDemo */,
 			);
 			path = KaeruDemo;
-			sourceTree = "<group>";
-		};
-		9CBC78161D731DFD00B9DE7A /* Kaeru */ = {
-			isa = PBXGroup;
-			children = (
-				9CBC78171D731DFD00B9DE7A /* CollectionView.swift */,
-				9CBC78181D731DFD00B9DE7A /* CollectionViewCell.swift */,
-				9CBC78191D731DFD00B9DE7A /* CollectionViewCell.xib */,
-				9CBC781A1D731DFD00B9DE7A /* CollectionViewController.swift */,
-				9CBC781B1D731DFD00B9DE7A /* CustomTransition.swift */,
-				9CBC781C1D731DFD00B9DE7A /* Helper.swift */,
-				9CBC781D1D731DFD00B9DE7A /* HistoryNavigationController.swift */,
-			);
-			name = Kaeru;
-			path = ../Kaeru;
 			sourceTree = "<group>";
 		};
 		9CBC78271D7321B400B9DE7A /* KaeruDemo */ = {
@@ -270,7 +240,6 @@
 			files = (
 				9CBC78321D7321B400B9DE7A /* LaunchScreen.storyboard in Resources */,
 				9CBC78311D7321B400B9DE7A /* Assets.xcassets in Resources */,
-				9CBC78201D731DFD00B9DE7A /* CollectionViewCell.xib in Resources */,
 				9CBC78341D7321B400B9DE7A /* Info.plist in Resources */,
 				9CBC78331D7321B400B9DE7A /* Main.storyboard in Resources */,
 			);
@@ -297,14 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBC781E1D731DFD00B9DE7A /* CollectionView.swift in Sources */,
-				9CBC78231D731DFD00B9DE7A /* Helper.swift in Sources */,
-				9CBC78221D731DFD00B9DE7A /* CustomTransition.swift in Sources */,
-				9CBC781F1D731DFD00B9DE7A /* CollectionViewCell.swift in Sources */,
 				9CBC78301D7321B400B9DE7A /* AppDelegate.swift in Sources */,
-				9CBC78241D731DFD00B9DE7A /* HistoryNavigationController.swift in Sources */,
 				9CBC78351D7321B400B9DE7A /* ViewController.swift in Sources */,
-				9CBC78211D731DFD00B9DE7A /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
