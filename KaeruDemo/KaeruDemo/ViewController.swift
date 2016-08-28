@@ -41,11 +41,7 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func showViewerButtonPressed(sender: AnyObject) {
-        guard let navigationController = navigationController as? HistoryNavigationController else {
-            fatalError()
-        }
-        
-        navigationController.showViewer()
+        navigationController?.presentHistory()
     }
     
     @IBAction func pushButtonPressed(sender: AnyObject) {

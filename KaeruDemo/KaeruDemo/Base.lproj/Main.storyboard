@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="8jS-cU-awq">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="HMw-qW-ldK" customClass="ViewController" customModule="Kaeru" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="HMw-qW-ldK" customClass="ViewController" customModule="KaeruDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="deU-Zg-3yL"/>
                         <viewControllerLayoutGuide type="bottom" id="ijv-lR-fpM"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2V-v8-ZeU">
-                                <rect key="frame" x="248" y="341" width="105" height="34"/>
+                                <rect key="frame" x="225" y="350" width="150" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Push">
                                     <color key="titleColor" red="0.76470588235294112" green="0.31764705882352939" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,15 +28,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-Ta-HrP">
-                                <rect key="frame" x="248" y="290" width="105" height="21"/>
+                                <rect key="frame" x="225" y="280" width="150" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DSh-mQ-Xcj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-GQ-eij">
-                                <rect key="frame" x="248" y="400" width="105" height="34"/>
+                                <rect key="frame" x="225" y="409" width="150" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Nim-2C-PHp"/>
+                                </constraints>
                                 <state key="normal" title="Show Viewer">
                                     <color key="titleColor" red="0.76470588235294112" green="0.31764705882352939" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -69,7 +75,7 @@
         <!--History Navigation Controller-->
         <scene sceneID="Jl9-XA-O7D">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nxx-u0-fID" customClass="HistoryNavigationController" customModule="Kaeru" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nxx-u0-fID" customClass="HistoryNavigationController" customModule="KaeruDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPY-Gd-Bmg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -21,6 +21,7 @@
 		9C3750FD1D733CC0007332E5 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F61D733CC0007332E5 /* CustomTransition.swift */; };
 		9C3750FE1D733CC0007332E5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F71D733CC0007332E5 /* Helper.swift */; };
 		9C3750FF1D733CC0007332E5 /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F81D733CC0007332E5 /* HistoryNavigationController.swift */; };
+		9C3751011D7340D9007332E5 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3751001D7340D9007332E5 /* UINavigationControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9C3750F61D733CC0007332E5 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		9C3750F71D733CC0007332E5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9C3750F81D733CC0007332E5 /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
+		9C3751001D7340D9007332E5 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				9C3750F61D733CC0007332E5 /* CustomTransition.swift */,
 				9C3750F71D733CC0007332E5 /* Helper.swift */,
 				9C3750F81D733CC0007332E5 /* HistoryNavigationController.swift */,
+				9C3751001D7340D9007332E5 /* UINavigationControllerExtension.swift */,
 			);
 			name = Kaeru;
 			path = ../Kaeru;
@@ -289,6 +292,7 @@
 			files = (
 				9C3750F91D733CC0007332E5 /* CollectionView.swift in Sources */,
 				9C3750FE1D733CC0007332E5 /* Helper.swift in Sources */,
+				9C3751011D7340D9007332E5 /* UINavigationControllerExtension.swift in Sources */,
 				9C3750FD1D733CC0007332E5 /* CustomTransition.swift in Sources */,
 				9C3750C61D733C6E007332E5 /* ViewController.swift in Sources */,
 				9C3750FA1D733CC0007332E5 /* CollectionViewCell.swift in Sources */,

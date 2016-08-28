@@ -12,7 +12,7 @@ public class HistoryNavigationController: UINavigationController {
     private var snapShots = [UIImage]()
     
     // MARK: - Interface
-    final func showViewer(backgroundView: UIView? = nil) {
+    public override func presentHistory(backgroundView: UIView? = nil) {
         if snapShots.isEmpty {
             return
         }
