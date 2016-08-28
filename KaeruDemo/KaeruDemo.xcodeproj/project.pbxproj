@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C3750C41D733C6E007332E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750C31D733C6E007332E5 /* AppDelegate.swift */; };
+		9C3750C61D733C6E007332E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750C51D733C6E007332E5 /* ViewController.swift */; };
+		9C3750C91D733C6E007332E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3750C71D733C6E007332E5 /* Main.storyboard */; };
+		9C3750CB1D733C6E007332E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3750CA1D733C6E007332E5 /* Assets.xcassets */; };
+		9C3750CE1D733C6E007332E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3750CC1D733C6E007332E5 /* LaunchScreen.storyboard */; };
+		9C3750D91D733C6F007332E5 /* KaeruDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750D81D733C6F007332E5 /* KaeruDemoTests.swift */; };
+		9C3750E41D733C6F007332E5 /* KaeruDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750E31D733C6F007332E5 /* KaeruDemoUITests.swift */; };
+		9C3750F91D733CC0007332E5 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F21D733CC0007332E5 /* CollectionView.swift */; };
+		9C3750FA1D733CC0007332E5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F31D733CC0007332E5 /* CollectionViewCell.swift */; };
+		9C3750FB1D733CC0007332E5 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3750F41D733CC0007332E5 /* CollectionViewCell.xib */; };
+		9C3750FC1D733CC0007332E5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F51D733CC0007332E5 /* CollectionViewController.swift */; };
+		9C3750FD1D733CC0007332E5 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F61D733CC0007332E5 /* CustomTransition.swift */; };
+		9C3750FE1D733CC0007332E5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F71D733CC0007332E5 /* Helper.swift */; };
+		9C3750FF1D733CC0007332E5 /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3750F81D733CC0007332E5 /* HistoryNavigationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C3750D51D733C6F007332E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3750B81D733C6E007332E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C3750BF1D733C6E007332E5;
+			remoteInfo = KaeruDemo;
+		};
+		9C3750E01D733C6F007332E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C3750B81D733C6E007332E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C3750BF1D733C6E007332E5;
+			remoteInfo = KaeruDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C3750C01D733C6E007332E5 /* KaeruDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaeruDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3750C31D733C6E007332E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C3750C51D733C6E007332E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C3750C81D733C6E007332E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C3750CA1D733C6E007332E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C3750CD1D733C6E007332E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C3750CF1D733C6E007332E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3750D41D733C6F007332E5 /* KaeruDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaeruDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3750D81D733C6F007332E5 /* KaeruDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaeruDemoTests.swift; sourceTree = "<group>"; };
+		9C3750DA1D733C6F007332E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3750DF1D733C6F007332E5 /* KaeruDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaeruDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3750E31D733C6F007332E5 /* KaeruDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaeruDemoUITests.swift; sourceTree = "<group>"; };
+		9C3750E51D733C6F007332E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3750F21D733CC0007332E5 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		9C3750F31D733CC0007332E5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		9C3750F41D733CC0007332E5 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		9C3750F51D733CC0007332E5 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		9C3750F61D733CC0007332E5 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		9C3750F71D733CC0007332E5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9C3750F81D733CC0007332E5 /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C3750BD1D733C6E007332E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C3750D11D733C6F007332E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C3750DC1D733C6F007332E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C3750B71D733C6E007332E5 = {
+			isa = PBXGroup;
+			children = (
+				9C3750F11D733CC0007332E5 /* Kaeru */,
+				9C3750C21D733C6E007332E5 /* KaeruDemo */,
+				9C3750D71D733C6F007332E5 /* KaeruDemoTests */,
+				9C3750E21D733C6F007332E5 /* KaeruDemoUITests */,
+				9C3750C11D733C6E007332E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C3750C11D733C6E007332E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C3750C01D733C6E007332E5 /* KaeruDemo.app */,
+				9C3750D41D733C6F007332E5 /* KaeruDemoTests.xctest */,
+				9C3750DF1D733C6F007332E5 /* KaeruDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C3750C21D733C6E007332E5 /* KaeruDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9C3750C31D733C6E007332E5 /* AppDelegate.swift */,
+				9C3750C51D733C6E007332E5 /* ViewController.swift */,
+				9C3750C71D733C6E007332E5 /* Main.storyboard */,
+				9C3750CA1D733C6E007332E5 /* Assets.xcassets */,
+				9C3750CC1D733C6E007332E5 /* LaunchScreen.storyboard */,
+				9C3750CF1D733C6E007332E5 /* Info.plist */,
+			);
+			path = KaeruDemo;
+			sourceTree = "<group>";
+		};
+		9C3750D71D733C6F007332E5 /* KaeruDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C3750D81D733C6F007332E5 /* KaeruDemoTests.swift */,
+				9C3750DA1D733C6F007332E5 /* Info.plist */,
+			);
+			path = KaeruDemoTests;
+			sourceTree = "<group>";
+		};
+		9C3750E21D733C6F007332E5 /* KaeruDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C3750E31D733C6F007332E5 /* KaeruDemoUITests.swift */,
+				9C3750E51D733C6F007332E5 /* Info.plist */,
+			);
+			path = KaeruDemoUITests;
+			sourceTree = "<group>";
+		};
+		9C3750F11D733CC0007332E5 /* Kaeru */ = {
+			isa = PBXGroup;
+			children = (
+				9C3750F21D733CC0007332E5 /* CollectionView.swift */,
+				9C3750F31D733CC0007332E5 /* CollectionViewCell.swift */,
+				9C3750F41D733CC0007332E5 /* CollectionViewCell.xib */,
+				9C3750F51D733CC0007332E5 /* CollectionViewController.swift */,
+				9C3750F61D733CC0007332E5 /* CustomTransition.swift */,
+				9C3750F71D733CC0007332E5 /* Helper.swift */,
+				9C3750F81D733CC0007332E5 /* HistoryNavigationController.swift */,
+			);
+			name = Kaeru;
+			path = ../Kaeru;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C3750BF1D733C6E007332E5 /* KaeruDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C3750E81D733C6F007332E5 /* Build configuration list for PBXNativeTarget "KaeruDemo" */;
+			buildPhases = (
+				9C3750BC1D733C6E007332E5 /* Sources */,
+				9C3750BD1D733C6E007332E5 /* Frameworks */,
+				9C3750BE1D733C6E007332E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaeruDemo;
+			productName = KaeruDemo;
+			productReference = 9C3750C01D733C6E007332E5 /* KaeruDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C3750D31D733C6F007332E5 /* KaeruDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C3750EB1D733C6F007332E5 /* Build configuration list for PBXNativeTarget "KaeruDemoTests" */;
+			buildPhases = (
+				9C3750D01D733C6F007332E5 /* Sources */,
+				9C3750D11D733C6F007332E5 /* Frameworks */,
+				9C3750D21D733C6F007332E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C3750D61D733C6F007332E5 /* PBXTargetDependency */,
+			);
+			name = KaeruDemoTests;
+			productName = KaeruDemoTests;
+			productReference = 9C3750D41D733C6F007332E5 /* KaeruDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C3750DE1D733C6F007332E5 /* KaeruDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C3750EE1D733C6F007332E5 /* Build configuration list for PBXNativeTarget "KaeruDemoUITests" */;
+			buildPhases = (
+				9C3750DB1D733C6F007332E5 /* Sources */,
+				9C3750DC1D733C6F007332E5 /* Frameworks */,
+				9C3750DD1D733C6F007332E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C3750E11D733C6F007332E5 /* PBXTargetDependency */,
+			);
+			name = KaeruDemoUITests;
+			productName = KaeruDemoUITests;
+			productReference = 9C3750DF1D733C6F007332E5 /* KaeruDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C3750B81D733C6E007332E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = kingkong999yhirose;
+				TargetAttributes = {
+					9C3750BF1D733C6E007332E5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					9C3750D31D733C6F007332E5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 9C3750BF1D733C6E007332E5;
+					};
+					9C3750DE1D733C6F007332E5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 9C3750BF1D733C6E007332E5;
+					};
+				};
+			};
+			buildConfigurationList = 9C3750BB1D733C6E007332E5 /* Build configuration list for PBXProject "KaeruDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C3750B71D733C6E007332E5;
+			productRefGroup = 9C3750C11D733C6E007332E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C3750BF1D733C6E007332E5 /* KaeruDemo */,
+				9C3750D31D733C6F007332E5 /* KaeruDemoTests */,
+				9C3750DE1D733C6F007332E5 /* KaeruDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C3750BE1D733C6E007332E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3750CE1D733C6E007332E5 /* LaunchScreen.storyboard in Resources */,
+				9C3750CB1D733C6E007332E5 /* Assets.xcassets in Resources */,
+				9C3750FB1D733CC0007332E5 /* CollectionViewCell.xib in Resources */,
+				9C3750C91D733C6E007332E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C3750D21D733C6F007332E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C3750DD1D733C6F007332E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C3750BC1D733C6E007332E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3750F91D733CC0007332E5 /* CollectionView.swift in Sources */,
+				9C3750FE1D733CC0007332E5 /* Helper.swift in Sources */,
+				9C3750FD1D733CC0007332E5 /* CustomTransition.swift in Sources */,
+				9C3750C61D733C6E007332E5 /* ViewController.swift in Sources */,
+				9C3750FA1D733CC0007332E5 /* CollectionViewCell.swift in Sources */,
+				9C3750C41D733C6E007332E5 /* AppDelegate.swift in Sources */,
+				9C3750FF1D733CC0007332E5 /* HistoryNavigationController.swift in Sources */,
+				9C3750FC1D733CC0007332E5 /* CollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C3750D01D733C6F007332E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3750D91D733C6F007332E5 /* KaeruDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C3750DB1D733C6F007332E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3750E41D733C6F007332E5 /* KaeruDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C3750D61D733C6F007332E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C3750BF1D733C6E007332E5 /* KaeruDemo */;
+			targetProxy = 9C3750D51D733C6F007332E5 /* PBXContainerItemProxy */;
+		};
+		9C3750E11D733C6F007332E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C3750BF1D733C6E007332E5 /* KaeruDemo */;
+			targetProxy = 9C3750E01D733C6F007332E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C3750C71D733C6E007332E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C3750C81D733C6E007332E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C3750CC1D733C6E007332E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C3750CD1D733C6E007332E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C3750E61D733C6F007332E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C3750E71D733C6F007332E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C3750E91D733C6F007332E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KaeruDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C3750EA1D733C6F007332E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KaeruDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9C3750EC1D733C6F007332E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KaeruDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KaeruDemo.app/KaeruDemo";
+			};
+			name = Debug;
+		};
+		9C3750ED1D733C6F007332E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KaeruDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KaeruDemo.app/KaeruDemo";
+			};
+			name = Release;
+		};
+		9C3750EF1D733C6F007332E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KaeruDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KaeruDemo;
+			};
+			name = Debug;
+		};
+		9C3750F01D733C6F007332E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KaeruDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.KaeruDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KaeruDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C3750BB1D733C6E007332E5 /* Build configuration list for PBXProject "KaeruDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C3750E61D733C6F007332E5 /* Debug */,
+				9C3750E71D733C6F007332E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C3750E81D733C6F007332E5 /* Build configuration list for PBXNativeTarget "KaeruDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C3750E91D733C6F007332E5 /* Debug */,
+				9C3750EA1D733C6F007332E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C3750EB1D733C6F007332E5 /* Build configuration list for PBXNativeTarget "KaeruDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C3750EC1D733C6F007332E5 /* Debug */,
+				9C3750ED1D733C6F007332E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C3750EE1D733C6F007332E5 /* Build configuration list for PBXNativeTarget "KaeruDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C3750EF1D733C6F007332E5 /* Debug */,
+				9C3750F01D733C6F007332E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C3750B81D733C6E007332E5 /* Project object */;
+}

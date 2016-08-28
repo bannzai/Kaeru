@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Kaeru.xcscheme</key>
+		<key>KaeruDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9CBC779A1D731D6600B9DE7A</key>
+		<key>9C3750BF1D733C6E007332E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CBC77AE1D731D6600B9DE7A</key>
+		<key>9C3750D31D733C6F007332E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CBC77B91D731D6600B9DE7A</key>
+		<key>9C3750DE1D733C6F007332E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
