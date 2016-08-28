@@ -58,35 +58,6 @@ internal extension UIView {
     
 }
 
-internal extension UIImage {
-    func blur(radius: CGFloat) -> UIImage {
-        guard let cgImage = CGImage,
-            filteredImage = Optional(CoreImage.CIImage(CGImage: cgImage)),
-            blurFilter = CIFilter(name: "CIGaussianBlur")
-            else {
-            return self
-        }
-        
-        blurFilter.setDefaults()
-        blurFilter.setValue(filteredImage, forKey: kCIInputImageKey)
-        blurFilter.setValue(radius, forKey: kCIInputRadiusKey)
-        
-        guard let cropFilter = CIFilter(name: "CICrop") else {
-            return self
-        }
-        
-        cropFilter.setValue(blurFilter.outputImage, forKey: kCIInputImageKey)
-        cropFilter.setValue(CIVector(CGRect: filteredImage.extent), forKey: "inputRectangle")
-        
-        guard let outputImage = cropFilter.outputImage else {
-            return self
-        }
-        
-        return UIImage(CIImage: outputImage)
-    }
-}
-
-
 internal extension UIView {
     var className: String {
         let className = NSStringFromClass(self.dynamicType)

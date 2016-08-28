@@ -31,6 +31,9 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.tintColor = .blackColor()
+        navigationController?.navigationBar.barTintColor = .orangeColor()
+        
         if let count = navigationController?.viewControllers.count {
             view.backgroundColor = colors[count - 1]
             label.text = "viewController: \(count - 1)"

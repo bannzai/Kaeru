@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2V-v8-ZeU">
-                                <rect key="frame" x="280" y="341" width="41" height="34"/>
+                                <rect key="frame" x="248" y="341" width="105" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Push">
                                     <color key="titleColor" red="0.76470588235294112" green="0.31764705882352939" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,8 +27,8 @@
                                     <action selector="pushButtonPressed:" destination="HMw-qW-ldK" eventType="touchUpInside" id="B99-Ij-3o3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-Ta-HrP">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-Ta-HrP">
+                                <rect key="frame" x="248" y="290" width="105" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -47,11 +47,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4fA-GQ-eij" firstAttribute="width" secondItem="Uwd-Ta-HrP" secondAttribute="width" id="3bT-hv-8RI"/>
                             <constraint firstItem="Uwd-Ta-HrP" firstAttribute="centerX" secondItem="QLK-qX-i23" secondAttribute="centerX" id="4rM-sx-MR3"/>
                             <constraint firstItem="Uwd-Ta-HrP" firstAttribute="centerY" secondItem="QLK-qX-i23" secondAttribute="centerY" id="QN4-mB-gvV"/>
                             <constraint firstItem="4fA-GQ-eij" firstAttribute="top" secondItem="V2V-v8-ZeU" secondAttribute="bottom" constant="25" id="Qcv-Sv-e83"/>
                             <constraint firstItem="V2V-v8-ZeU" firstAttribute="top" secondItem="Uwd-Ta-HrP" secondAttribute="bottom" constant="30" id="UGC-Tc-y5O"/>
                             <constraint firstItem="V2V-v8-ZeU" firstAttribute="centerX" secondItem="QLK-qX-i23" secondAttribute="centerX" id="rBA-H4-rvC"/>
+                            <constraint firstItem="V2V-v8-ZeU" firstAttribute="width" secondItem="Uwd-Ta-HrP" secondAttribute="width" id="slu-Eu-n07"/>
                             <constraint firstItem="4fA-GQ-eij" firstAttribute="centerX" secondItem="QLK-qX-i23" secondAttribute="centerX" id="uUX-tX-Gh2"/>
                         </constraints>
                     </view>

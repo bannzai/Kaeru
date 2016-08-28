@@ -26,8 +26,6 @@ final class CollectionViewController: UIViewController {
         self.backgroundView = backgroundView ?? defaultBackgroundView()
         
         super.init(nibName: nil, bundle: nil)
-        
-        setupBlurImagesInBackground()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,7 +34,6 @@ final class CollectionViewController: UIViewController {
     
     private var beforeContentOffset: CGPoint?
     private var scrollDirection: ScrollDirection = .none
-    private var blurImages: [UIImage] = []
     
     final lazy var collectionView: CollectionView = {
         let collectionView = CollectionView(frame: UIScreen.mainScreen().bounds, collectionViewLayout: {
@@ -67,25 +64,6 @@ final class CollectionViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.enabled = false
         view.addSubview(collectionView)
         collectionView.frame = view.frame
-    }
-    
-    private func setupBlurImagesInBackground() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            self.snapShots.forEach { snapShot in
-                let blurImage = snapShot.blur(10)
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.blurImages.append(blurImage)
-                }
-            }
-        }
-    }
-    
-    private func blurImageOrSnapShot(of index: Int) -> UIImage {
-        if blurImages.count <= index {
-            return snapShots[index]
-        }
-        
-        return blurImages[index]
     }
     
     final func setContentOffsetRight() {
@@ -145,7 +123,7 @@ extension CollectionViewController: UICollectionViewDataSource {
     
     final func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCell.className, forIndexPath: indexPath) as! CollectionViewCell
-        cell.setup(with: snapShots[indexPath.item], blurImage: blurImageOrSnapShot(of: indexPath.item))
+        cell.setup(with: snapShots[indexPath.item])
         return cell
     }
 }

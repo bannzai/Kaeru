@@ -43,7 +43,7 @@ class CollectionViewCell: UICollectionViewCell {
         blurView.alpha = 0
     }
     
-    func setup(with image: UIImage, blurImage: UIImage) {
+    func setup(with image: UIImage) {
         imageView.image = image
     }
     

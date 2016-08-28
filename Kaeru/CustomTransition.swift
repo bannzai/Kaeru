@@ -43,49 +43,50 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             return
         }
         
-        guard let KaeruViewController = toViewController as? CollectionViewController else {
+        guard let collectionViewController = toViewController as? CollectionViewController else {
             return
         }
         
         do { // prepare for transition
-            containerView.addSubview(KaeruViewController.view)
+            containerView.addSubview(collectionViewController.view)
             containerView.addSubview(fromViewController.view)
-            fromViewController.view.hidden = true
-            fromViewController.view.frame = containerView.frame
-            KaeruViewController.view.frame = containerView.bounds
             
-            KaeruViewController.viewWillAppear(false)
+            fromViewController.view.frame = containerView.frame
+            collectionViewController.view.frame = containerView.bounds
+            
+            collectionViewController.viewWillAppear(false)
         }
         
         do { // setup collection view layout
-            KaeruViewController.collectionView.layout.isTransitioning = true
-            KaeruViewController.collectionView.layout.reset()
-            KaeruViewController.setContentOffsetRight()
-            KaeruViewController.collectionView.reloadData()
-            KaeruViewController.collectionView.layoutIfNeeded()
-            KaeruViewController.collectionView.layout.isTransitioning = false
+            collectionViewController.collectionView.layout.isTransitioning = true
+            collectionViewController.collectionView.layout.reset()
+            collectionViewController.setContentOffsetRight()
+            collectionViewController.collectionView.reloadData()
+            collectionViewController.collectionView.layoutIfNeeded()
+            collectionViewController.collectionView.layout.isTransitioning = false
         }
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 1, options: .CurveEaseInOut, animations: {
-            self.appearAnimation(KaeruViewController)
+            fromViewController.view.hidden = true
+            self.appearAnimation(collectionViewController)
         }) { finished in
             fromViewController.view.transform = CGAffineTransformIdentity
             fromViewController.view.hidden = true
             fromViewController.view.removeFromSuperview()
-            KaeruViewController.collectionView.reloadData()
+            collectionViewController.collectionView.reloadData()
             transitionContext.completeTransition(true)
         }
     }
     
-    private func appearAnimation(KaeruViewController: CollectionViewController) {
-        let collectionView = KaeruViewController.collectionView
-        KaeruViewController.collectionView.layout.attributesList.enumerate().forEach { index, attributes in
+    private func appearAnimation(collectionViewController: CollectionViewController) {
+        let collectionView = collectionViewController.collectionView
+        collectionViewController.collectionView.layout.attributesList.enumerate().forEach { index, attributes in
             guard let cell = collectionView.cellForItemAtIndexPath(attributes.indexPath) else {
                 fatalError()
             }
             
             do { // configure appearing cells animation
-                let layout = KaeruViewController.collectionView.layout
+                let layout = collectionViewController.collectionView.layout
                 
                 let scaleX = attributes.transform.a * 0.8
                 let scaleY = attributes.transform.d * 0.8
@@ -112,7 +113,7 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             return
         }
         
-        guard let KaeruViewController = fromViewController as? CollectionViewController else {
+        guard let collectionViewController = fromViewController as? CollectionViewController else {
             return
         }
         
@@ -120,7 +121,7 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             return
         }
         
-        guard let selectedIndexPath = KaeruViewController.collectionView.layout.selectedIndexPath else {
+        guard let selectedIndexPath = collectionViewController.collectionView.layout.selectedIndexPath else {
             return
         }
         
@@ -131,8 +132,8 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             toViewController.view.hidden = true
             toViewController.view.frame = containerView.bounds
             
-            KaeruViewController.view.frame = containerView.bounds
-            KaeruViewController.collectionView.transform = CGAffineTransformIdentity
+            collectionViewController.view.frame = containerView.bounds
+            collectionViewController.collectionView.transform = CGAffineTransformIdentity
         }
         
         do {
@@ -140,21 +141,21 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             navigationController.popToViewController(viewController, animated: false)
         }
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
-            KaeruViewController.collectionView.layout.attributesList.forEach { attributes in
+            collectionViewController.collectionView.layout.attributesList.forEach { attributes in
                 guard selectedIndexPath.item == attributes.indexPath.item else {
                     return
                 }
                 
-                guard let cell = KaeruViewController.collectionView.cellForItemAtIndexPath(attributes.indexPath) else {
+                guard let cell = collectionViewController.collectionView.cellForItemAtIndexPath(attributes.indexPath) else {
                     return
                 }
                 
-                attributes.zIndex = KaeruViewController.collectionView.layout.attributesList.count
-                KaeruViewController.collectionView.bringSubviewToFront(cell)
+                attributes.zIndex = collectionViewController.collectionView.layout.attributesList.count
+                collectionViewController.collectionView.bringSubviewToFront(cell)
             }
             
             let scale = 1 / CustomLayout.adjustCellSize
-            KaeruViewController.collectionView.transform = CGAffineTransformMakeScale(scale, scale)
+            collectionViewController.collectionView.transform = CGAffineTransformMakeScale(scale, scale)
         }) { finished in
             toViewController.view.hidden = false
             fromViewController.view.removeFromSuperview()
