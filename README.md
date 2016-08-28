@@ -6,7 +6,29 @@
 ![](./KaeruIntroductionResource/iPhone.gif)
 
 ## Usage
-You can call `self.navigationController?.presentHistory()` in UIViewController sub class. After it, appearance would change like iOS task manager UI.
+You can use `HistoryNavigationController`, that sub class of `UINavigationController`. It can be used like `UINavigationController`.
+
+### e.g
+#### On storyboard  
+![](./KaeruIntroductionResource/on_storyboard.png)
+
+#### Swift code in AppDelegate
+```
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    // Override point for customization after application launch.
+
+    let viewContoller = UIViewController()
+    let navigationController = HistoryNavigationController(rootViewController: viewContoller)
+
+    window?.rootViewController = navigationController
+
+    window?.makeKeyAndVisible()
+
+    return true
+}
+```
+
+And you can call `self.navigationController?.presentHistory()` in UIViewController sub class. After it, appearance would change like iOS task manager UI.
 
 ```
 @IBAction func showViewerButtonPressed(sender: AnyObject) {
