@@ -43,6 +43,10 @@ final class ViewController: UITableViewController {
         tableView.registerNib(Cell.nib(), forCellReuseIdentifier: Cell.className)
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let image = sender as? UIImage,
             viewController = segue.destinationViewController as? DetailViewController
