@@ -1,0 +1,14 @@
+PODS:
+  - Kaeru (1.0.0)
+
+DEPENDENCIES:
+  - Kaeru (from `../`)
+
+EXTERNAL SOURCES:
+  Kaeru:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kaeru: 37f79f65e6fc94f03633f7a56158656dd022f84e
+
+COCOAPODS: 0.39.0

@@ -71,13 +71,6 @@ internal extension UIView {
     }
 }
 
-internal extension UIView {
-    static func nib() -> UINib {
-        return UINib(nibName: className, bundle: nil)
-    }
-}
-
-
 internal extension Array {
     mutating func removeToLast(from index: Int) {
         removeRange(index..<count)

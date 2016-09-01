@@ -27,6 +27,10 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     
+    static func nib() -> UINib {
+        return UINib(nibName: className, bundle: NSBundle(forClass: CollectionViewCell.self))
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

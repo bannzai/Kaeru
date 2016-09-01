@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kaeru
 
 final class Cell: UITableViewCell {
     @IBOutlet weak var contentImageView: UIImageView!

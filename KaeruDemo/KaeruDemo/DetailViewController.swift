@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kaeru
 
 internal extension UIImage {
     func blur(radius: CGFloat) -> UIImage {
