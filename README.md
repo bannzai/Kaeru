@@ -10,6 +10,10 @@ You can use `HistoryNavigationController`, that sub class of `UINavigationContro
 
 ### e.g
 #### On storyboard  
+##### If you install through CocoaPods.
+![](./KaeruIntroductionResource/on_storyboard_when_cocoapods.png)
+
+##### If you install through download or git clone.
 ![](./KaeruIntroductionResource/on_storyboard.png)
 
 #### Swift code in AppDelegate
@@ -52,7 +56,7 @@ navigationController?.presentHistory(view)
 This sample code write and run, when `HistoryNavigationController` appear, background becomes red.
 
 ## TODO
-- [ ] Support cocoapods.
+- [x] Support cocoapods.
 - [ ] Support Carthage.
 - [ ] Add delegate methods.
 - [ ] Test.
