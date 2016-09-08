@@ -57,7 +57,7 @@ This sample code write and run, when `HistoryNavigationController` appear, backg
 
 ## TODO
 - [x] Support cocoapods.
-- [ ] Support Carthage.
+- [x] Support Carthage.
 - [ ] Add delegate methods.
 - [ ] Test.
 
