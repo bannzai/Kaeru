@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   
-  s.source_files = 'Kaeru/*.swift'
-  s.resources = 'Kaeru/*.xib'
+  s.source_files = 'Kaeru/Sources/*.swift'
+  s.resources = 'Kaeru/Sources/*.xib'
 end
