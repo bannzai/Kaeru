@@ -3,7 +3,8 @@
 **Kaeru** can switch ViewController in NavigationController like iOS task manager UI (after iOS 9).
 
 ## Movie
-![](./KaeruIntroductionResource/iPhone.gif)
+
+![](https://cloud.githubusercontent.com/assets/10897361/19626981/268ca80a-9978-11e6-9fa3-465d0851aa31.gif)
 
 ## Usage
 You can use `HistoryNavigationController`, that sub class of `UINavigationController`. It can be used like `UINavigationController`.
@@ -11,8 +12,7 @@ You can use `HistoryNavigationController`, that sub class of `UINavigationContro
 ### e.g
 #### On storyboard  
 ##### If you install through CocoaPods.
-![](https://cloud.githubusercontent.com/assets/10897361/19626981/268ca80a-9978-11e6-9fa3-465d0851aa31.gif)
-
+![](./KaeruIntroductionResource/on_storyboard_when_cocoapods.png)
 
 ##### If you install through download or git clone.
 ![](./KaeruIntroductionResource/on_storyboard.png)
