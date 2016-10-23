@@ -40,8 +40,8 @@ class CollectionViewCell: UICollectionViewCell {
         
         configureSnapShotLayer()
         
-        backgroundColor = .clear()
-        contentView.backgroundColor = .clear()
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
         
         imageView.isHidden = false
         blurView.alpha = 0

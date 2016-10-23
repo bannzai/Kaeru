@@ -21,10 +21,10 @@ class CustomLayout: UICollectionViewFlowLayout {
     static let adjustCellSize: CGFloat = 0.8
     static let coefficientOfScale: CGFloat = 0.02
     
-    fileprivate let visibleCellCount = 6
-    fileprivate let cellCount: Int
+    private let visibleCellCount = 6
+    private let cellCount: Int
     
-    fileprivate var needPrepareLayout: Bool {
+    private var needPrepareLayout: Bool {
         return attributesList.isEmpty && startAttributesList.isEmpty
     }
     
@@ -74,14 +74,14 @@ class CustomLayout: UICollectionViewFlowLayout {
         prepareIfNeeded()
     }
     
-    fileprivate func prepareIfNeeded() {
+    private func prepareIfNeeded() {
         guard needPrepareLayout else {
             return
         }
-        prepare()
+        _prepare()
     }
     
-    override func prepare() {
+    private func _prepare() {
         let widthEachCell = width / CGFloat(visibleCellCount)
         let heightEachCell = height
         
@@ -120,7 +120,7 @@ class CustomLayout: UICollectionViewFlowLayout {
         return contentSize
     }
     
-    fileprivate func center(at index: Int) -> CGPoint {
+    private func center(at index: Int) -> CGPoint {
         func convert(with index: Int) -> CGFloat {
             return CGFloat(index)
         }
@@ -132,7 +132,7 @@ class CustomLayout: UICollectionViewFlowLayout {
         return CGPoint(x: x, y: y)
     }
     
-    fileprivate var contentOffsetCenter: CGPoint {
+    private var contentOffsetCenter: CGPoint {
         guard let collectionView = collectionView else {
             return CGPoint.zero
         }
@@ -142,7 +142,7 @@ class CustomLayout: UICollectionViewFlowLayout {
         return CGPoint(x: x, y: y)
     }
     
-    fileprivate var contentOffsetCenterX: CGFloat {
+    private var contentOffsetCenterX: CGFloat {
         return contentOffsetCenter.x
     }
     

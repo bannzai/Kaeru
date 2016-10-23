@@ -8,7 +8,7 @@
 import UIKit
 
 final class CollectionViewController: UIViewController {
-    fileprivate enum ScrollDirection {
+    private enum ScrollDirection {
         case none, left, right
     }
     
@@ -18,7 +18,7 @@ final class CollectionViewController: UIViewController {
     init(snapShots: [UIImage], backgroundView: UIView?) {
         func defaultBackgroundView() -> UIView {
             let view = UIView(frame: UIScreen.main.bounds)
-            view.backgroundColor = .gray()
+            view.backgroundColor = .gray
             return view
         }
         
@@ -85,7 +85,7 @@ extension CollectionViewController: UIScrollViewDelegate {
         scrollDirection = scrollView.contentOffset.x > beforeContentOffset.x ? .left : .right
     }
     
-    fileprivate func scrollAnimation() {
+    private func scrollAnimation() {
         self.collectionView.setContentOffset(collectionView.layout.contentOffsetForCurrentIndex(), animated: true)
     }
     

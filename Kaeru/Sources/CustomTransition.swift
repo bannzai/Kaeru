@@ -28,10 +28,13 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     fileprivate func extractContextInfoFrom(_ transitionContext: UIViewControllerContextTransitioning) -> (containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController)? {
-        guard let containerView = transitionContext.containerView,
+        
+        
+        guard
+            let containerView = Optional(transitionContext.containerView),
             let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
             let toViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
-            else {
+            else  {
                 return nil
         }
         
