@@ -36,10 +36,10 @@ final class ViewController: UITableViewController {
         ]
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad( )
         
-        navigationController?.navigationBar.tintColor = .black()
-        navigationController?.navigationBar.barTintColor = .white()
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.barTintColor = .white
         
         tableView.register(Cell.nib(), forCellReuseIdentifier: Cell.className)
     }

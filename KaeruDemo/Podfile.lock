@@ -1,5 +1,5 @@
 PODS:
-  - Kaeru (1.0.0)
+  - Kaeru (1.1.0)
 
 DEPENDENCIES:
   - Kaeru (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Kaeru: 37f79f65e6fc94f03633f7a56158656dd022f84e
+  Kaeru: 95503209dd0a2895205a5010412d31fba83c00ab
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 8499c82584f8d44ce3d1a65bb8c909c8346f4ba4
+
+COCOAPODS: 1.1.1

@@ -74,7 +74,7 @@ class DetailViewController: UIViewController {
     
     
     fileprivate func setupBlurImagesInBackground() {
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global().async {
             let blurImage = self.image?.blur(10)
             DispatchQueue.main.async {
                 self.blurImage = blurImage
