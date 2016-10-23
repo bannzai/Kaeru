@@ -10,10 +10,10 @@ import UIKit
 import Kaeru
 
 internal extension UIImage {
-    func blur(radius: CGFloat) -> UIImage {
-        guard let cgImage = CGImage,
-            filteredImage = Optional(CoreImage.CIImage(CGImage: cgImage)),
-            blurFilter = CIFilter(name: "CIGaussianBlur")
+    func blur(_ radius: CGFloat) -> UIImage {
+        guard let cgImage = cgImage,
+            let filteredImage = Optional(CoreImage.CIImage(cgImage: cgImage)),
+            let blurFilter = CIFilter(name: "CIGaussianBlur")
             else {
                 return self
         }
@@ -27,13 +27,13 @@ internal extension UIImage {
         }
         
         cropFilter.setValue(blurFilter.outputImage, forKey: kCIInputImageKey)
-        cropFilter.setValue(CIVector(CGRect: filteredImage.extent), forKey: "inputRectangle")
+        cropFilter.setValue(CIVector(cgRect: filteredImage.extent), forKey: "inputRectangle")
         
         guard let outputImage = cropFilter.outputImage else {
             return self
         }
         
-        return UIImage(CIImage: outputImage)		
+        return UIImage(ciImage: outputImage)		
     }		
 }		
 
@@ -43,7 +43,7 @@ internal extension UIImage {
 class DetailViewController: UIViewController {
     class func instance() -> DetailViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         return viewController
     }
     
@@ -56,7 +56,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.contentMode = .ScaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         imageView.image = image
         
         label.text = [
@@ -73,16 +73,16 @@ class DetailViewController: UIViewController {
     }
     
     
-    private func setupBlurImagesInBackground() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+    fileprivate func setupBlurImagesInBackground() {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             let blurImage = self.image?.blur(10)
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.blurImage = blurImage
             }
         }
     }
     
-    @IBAction func showHIstoryPressed(sender: AnyObject) {
+    @IBAction func showHIstoryPressed(_ sender: AnyObject) {
         guard let blurImage = blurImage else {
             navigationController?.presentHistory()
             return

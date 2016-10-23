@@ -20,13 +20,13 @@ final class Cell: UITableViewCell {
 final class ViewController: UITableViewController {
     class func instance() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         return viewController
     }
     
     @IBOutlet weak var label: UILabel!
 
-    private let images: [UIImage] = [
+    fileprivate let images: [UIImage] = [
         UIImage(named: "image1")!,
         UIImage(named: "image2")!,
         UIImage(named: "image3")!,
@@ -38,19 +38,19 @@ final class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.tintColor = .blackColor()
-        navigationController?.navigationBar.barTintColor = .whiteColor()
+        navigationController?.navigationBar.tintColor = .black()
+        navigationController?.navigationBar.barTintColor = .white()
         
-        tableView.registerNib(Cell.nib(), forCellReuseIdentifier: Cell.className)
+        tableView.register(Cell.nib(), forCellReuseIdentifier: Cell.className)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let image = sender as? UIImage,
-            viewController = segue.destinationViewController as? DetailViewController
+            let viewController = segue.destination as? DetailViewController
             else {
             return
         }
@@ -60,26 +60,26 @@ final class ViewController: UITableViewController {
 }
 
 extension ViewController {
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return images.count
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 240
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Cell.className, forIndexPath: indexPath) as! Cell
-        cell.setup(with: images[indexPath.row])
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.className, for: indexPath) as! Cell
+        cell.setup(with: images[(indexPath as NSIndexPath).row])
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("toDetail", sender: images[indexPath.row])
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetail", sender: images[(indexPath as NSIndexPath).row])
     }
 }
 

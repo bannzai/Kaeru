@@ -10,14 +10,14 @@ import UIKit
 
 internal extension UIView {
     var className: String {
-        let className = NSStringFromClass(self.dynamicType)
-        let range = className.rangeOfString(".")
-        return className.substringFromIndex(range!.endIndex)
+        let className = NSStringFromClass(type(of: self))
+        let range = className.range(of: ".")
+        return className.substring(from: range!.upperBound)
     }
     class var className: String {
         let className = NSStringFromClass(self)
-        let range = className.rangeOfString(".")
-        return className.substringFromIndex(range!.endIndex)
+        let range = className.range(of: ".")
+        return className.substring(from: range!.upperBound)
     }
 }
 
