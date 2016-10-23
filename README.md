@@ -11,7 +11,8 @@ You can use `HistoryNavigationController`, that sub class of `UINavigationContro
 ### e.g
 #### On storyboard  
 ##### If you install through CocoaPods.
-![](./KaeruIntroductionResource/on_storyboard_when_cocoapods.png)
+![](https://cloud.githubusercontent.com/assets/10897361/19626981/268ca80a-9978-11e6-9fa3-465d0851aa31.gif)
+
 
 ##### If you install through download or git clone.
 ![](./KaeruIntroductionResource/on_storyboard.png)
