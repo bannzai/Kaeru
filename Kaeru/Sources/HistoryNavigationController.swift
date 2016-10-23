@@ -8,11 +8,11 @@
 
 import UIKit
  
-public class HistoryNavigationController: UINavigationController {
-    private var snapShots = [UIImage]()
+open class HistoryNavigationController: UINavigationController {
+    fileprivate var snapShots = [UIImage]()
     
     // MARK: - Interface
-    public override func presentHistory(backgroundView: UIView? = nil) {
+    open override func presentHistory(_ backgroundView: UIView? = nil) {
         if snapShots.isEmpty {
             return
         }
@@ -24,40 +24,40 @@ public class HistoryNavigationController: UINavigationController {
         snapShots.append(image)
         let viewController = CollectionViewController(snapShots: snapShots, backgroundView: backgroundView)
         viewController.transitioningDelegate = self
-        presentViewController(viewController, animated: true, completion: nil)
+        present(viewController, animated: true, completion: nil)
     }
     
     // MARK: - Override For Transition
-    override public func pushViewController(viewController: UIViewController, animated: Bool) {
+    override open func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if let image = visibleViewController?.snapShotFromWindow() {
             snapShots.append(image)
         }
         super.pushViewController(viewController, animated: animated)
     }
     
-    override public func popToRootViewControllerAnimated(animated: Bool) -> [UIViewController]? {
+    override open func popToRootViewController(animated: Bool) -> [UIViewController]? {
         snapShots.removeAll()
-        return super.popToRootViewControllerAnimated(animated)
+        return super.popToRootViewController(animated: animated)
     }
     
-    override public func popToViewController(viewController: UIViewController, animated: Bool) -> [UIViewController]? {
-        if let index = viewControllers.indexOf(viewController) {
+    override open func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+        if let index = viewControllers.index(of: viewController) {
             snapShots.removeToLastIfPossible(from: index)
         }
         return super.popToViewController(viewController, animated: animated)
     }
     
     // MARK: - Override For Change ViewController
-    override public func setViewControllers(viewControllers: [UIViewController], animated: Bool) {
+    override open func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
         snapShots.removeAll()
-        snapShots.appendContentsOf(viewControllers.flatMap { $0.snapShotFromWindow() })
+        snapShots.append(contentsOf: viewControllers.flatMap { $0.snapShotFromWindow() })
         super.setViewControllers(viewControllers, animated: animated)
     }
 }
 
 // MARK: - UINavigationBarDelegate
 extension HistoryNavigationController: UINavigationBarDelegate {
-    public func navigationBar(navigationBar: UINavigationBar, didPopItem item: UINavigationItem) {
+    public func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
         guard let items = navigationBar.items else {
             return
         }
@@ -67,11 +67,11 @@ extension HistoryNavigationController: UINavigationBarDelegate {
 
 // MARK: - UIViewControllerTransitioningDelegate
 extension HistoryNavigationController: UIViewControllerTransitioningDelegate {
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return CustomTransition(isPresent: true)
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return CustomTransition(isPresent: false)
     }
 }

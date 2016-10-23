@@ -17,15 +17,15 @@ internal extension UIViewController {
 
 internal extension UIView {
     func snapShotFromWindow() -> UIImage {
-        guard let window = UIApplication.sharedApplication().keyWindow else {
+        guard let window = UIApplication.shared.keyWindow else {
             fatalError()
         }
         
         UIGraphicsBeginImageContextWithOptions(window.frame.size, false, 1)
-        window.drawViewHierarchyInRect(window.bounds, afterScreenUpdates: true)
+        window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
 }
 
@@ -35,24 +35,24 @@ internal extension UIView {
         layer.masksToBounds = false
         layer.shadowOffset = CGSize(width: 4, height: 4)
         layer.shadowOpacity = 0.7
-        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowColor = UIColor.black.cgColor
         layer.shadowRadius = 5
     }
 }
 
 
 internal extension UIView {
-    func addWholeConstraint(view: UIView) {
-        [.Top, .Bottom, .Left, .Right].forEach {
+    func addWholeConstraint(_ view: UIView) {
+        [.top, .bottom, .left, .right].forEach {
             NSLayoutConstraint(
                 item: self,
                 attribute: $0,
-                relatedBy: .Equal,
+                relatedBy: .equal,
                 toItem: view,
                 attribute: $0,
                 multiplier: 1,
                 constant: 0)
-                .active = true
+                .isActive = true
         }
     }
     
@@ -60,20 +60,20 @@ internal extension UIView {
 
 internal extension UIView {
     var className: String {
-        let className = NSStringFromClass(self.dynamicType)
-        let range = className.rangeOfString(".")
-        return className.substringFromIndex(range!.endIndex)
+        let className = NSStringFromClass(type(of: self))
+        let range = className.range(of: ".")
+        return className.substring(from: range!.upperBound)
     }
     class var className: String {
         let className = NSStringFromClass(self)
-        let range = className.rangeOfString(".")
-        return className.substringFromIndex(range!.endIndex)
+        let range = className.range(of: ".")
+        return className.substring(from: range!.upperBound)
     }
 }
 
 internal extension Array {
     mutating func removeToLast(from index: Int) {
-        removeRange(index..<count)
+        removeSubrange(index..<count)
     }
     mutating func removeToLastIfPossible(from index: Int) {
         if index >= count {

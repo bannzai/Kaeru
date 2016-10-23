@@ -8,17 +8,17 @@
 import UIKit
 
 final class CollectionViewController: UIViewController {
-    private enum ScrollDirection {
+    fileprivate enum ScrollDirection {
         case none, left, right
     }
     
-    private let snapShots: [UIImage]
-    private let backgroundView: UIView
+    fileprivate let snapShots: [UIImage]
+    fileprivate let backgroundView: UIView
     
     init(snapShots: [UIImage], backgroundView: UIView?) {
         func defaultBackgroundView() -> UIView {
-            let view = UIView(frame: UIScreen.mainScreen().bounds)
-            view.backgroundColor = .grayColor()
+            let view = UIView(frame: UIScreen.main.bounds)
+            view.backgroundColor = .gray()
             return view
         }
         
@@ -32,15 +32,15 @@ final class CollectionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private var beforeContentOffset: CGPoint?
-    private var scrollDirection: ScrollDirection = .none
+    fileprivate var beforeContentOffset: CGPoint?
+    fileprivate var scrollDirection: ScrollDirection = .none
     
     final lazy var collectionView: CollectionView = {
-        let collectionView = CollectionView(frame: UIScreen.mainScreen().bounds, collectionViewLayout: {
+        let collectionView = CollectionView(frame: UIScreen.main.bounds, collectionViewLayout: {
             let layout = CustomLayout(snapShots: self.snapShots)
             layout.minimumLineSpacing = 0
             layout.minimumInteritemSpacing = 0
-            layout.scrollDirection = .Horizontal
+            layout.scrollDirection = .horizontal
             return layout
             }()
         )
@@ -49,7 +49,7 @@ final class CollectionViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.alwaysBounceHorizontal = true
-        collectionView.registerNib(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.className)
+        collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.className)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         
@@ -61,19 +61,19 @@ final class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.interactivePopGestureRecognizer?.enabled = false
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         view.addSubview(collectionView)
         collectionView.frame = view.frame
     }
     
     final func setContentOffsetRight() {
-        let index = collectionView.numberOfItemsInSection(0) - 2
+        let index = collectionView.numberOfItems(inSection: 0) - 2
         collectionView.setContentOffset(collectionView.layout.contentOffset(for: index), animated: false)
     }
 }
 
 extension CollectionViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         defer {
             beforeContentOffset = scrollView.contentOffset
         }
@@ -85,17 +85,17 @@ extension CollectionViewController: UIScrollViewDelegate {
         scrollDirection = scrollView.contentOffset.x > beforeContentOffset.x ? .left : .right
     }
     
-    private func scrollAnimation() {
+    fileprivate func scrollAnimation() {
         self.collectionView.setContentOffset(collectionView.layout.contentOffsetForCurrentIndex(), animated: true)
     }
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
             scrollAnimation()
         }
     }
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if velocity.x == 0 {
             return
         }
@@ -108,34 +108,34 @@ extension CollectionViewController: UIScrollViewDelegate {
         targetIndex = targetIndex >= snapShots.count - 1 ? snapShots.count - 1 : targetIndex
         targetIndex = targetIndex <= 0 ? 0 : targetIndex
         
-        targetContentOffset.memory.x = collectionView.layout.contentOffset(for: targetIndex).x
+        targetContentOffset.pointee.x = collectionView.layout.contentOffset(for: targetIndex).x
     }
 }
 
 extension CollectionViewController: UICollectionViewDataSource {
-    final func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    final func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    final func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    final func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return snapShots.count
     }
     
-    final func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCell.className, forIndexPath: indexPath) as! CollectionViewCell
-        cell.setup(with: snapShots[indexPath.item])
+    final func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.className, for: indexPath) as! CollectionViewCell
+        cell.setup(with: snapShots[(indexPath as NSIndexPath).item])
         return cell
     }
 }
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
-    final func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(width, height)
+    final func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: width, height: height)
     }
     
-    final func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    final func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.collectionView.layout.selectedIndexPath = indexPath
-        collectionView.setContentOffset(self.collectionView.layout.contentOffset(for: indexPath.item), animated: true)
-        dismissViewControllerAnimated(true, completion: nil)
+        collectionView.setContentOffset(self.collectionView.layout.contentOffset(for: (indexPath as NSIndexPath).item), animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }

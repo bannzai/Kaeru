@@ -9,28 +9,28 @@
 import UIKit
 
 final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
-    private var isPresent: Bool = false
-    private let imageViewTag = 10000
-    private var transitionContext: UIViewControllerContextTransitioning?
+    fileprivate var isPresent: Bool = false
+    fileprivate let imageViewTag = 10000
+    fileprivate var transitionContext: UIViewControllerContextTransitioning?
     
     init(isPresent: Bool) {
         self.isPresent = isPresent
     }
     
-    final func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    final func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
-    final func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    final func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let transition = isPresent ? show : hide
         self.transitionContext = transitionContext
         transition(transitionContext)
     }
     
-    private func extractContextInfoFrom(transitionContext: UIViewControllerContextTransitioning) -> (containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController)? {
-        guard let containerView = transitionContext.containerView(),
-            fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
-            toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+    fileprivate func extractContextInfoFrom(_ transitionContext: UIViewControllerContextTransitioning) -> (containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController)? {
+        guard let containerView = transitionContext.containerView,
+            let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
+            let toViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
             else {
                 return nil
         }
@@ -38,7 +38,7 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
         return (containerView, fromViewController, toViewController)
     }
     
-    private func show(transitionContext: UIViewControllerContextTransitioning) {
+    fileprivate func show(_ transitionContext: UIViewControllerContextTransitioning) {
         guard let (containerView, fromViewController, toViewController) = extractContextInfoFrom(transitionContext) else {
             return
         }
@@ -66,22 +66,22 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             collectionViewController.collectionView.layout.isTransitioning = false
         }
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 1, options: .CurveEaseInOut, animations: {
-            fromViewController.view.hidden = true
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 1, options: UIViewAnimationOptions(), animations: {
+            fromViewController.view.isHidden = true
             self.appearAnimation(collectionViewController)
         }) { finished in
-            fromViewController.view.transform = CGAffineTransformIdentity
-            fromViewController.view.hidden = true
+            fromViewController.view.transform = CGAffineTransform.identity
+            fromViewController.view.isHidden = true
             fromViewController.view.removeFromSuperview()
             collectionViewController.collectionView.reloadData()
             transitionContext.completeTransition(true)
         }
     }
     
-    private func appearAnimation(collectionViewController: CollectionViewController) {
+    fileprivate func appearAnimation(_ collectionViewController: CollectionViewController) {
         let collectionView = collectionViewController.collectionView
-        collectionViewController.collectionView.layout.attributesList.enumerate().forEach { index, attributes in
-            guard let cell = collectionView.cellForItemAtIndexPath(attributes.indexPath) else {
+        collectionViewController.collectionView.layout.attributesList.enumerated().forEach { index, attributes in
+            guard let cell = collectionView.cellForItem(at: attributes.indexPath) else {
                 fatalError()
             }
             
@@ -90,25 +90,25 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 
                 let scaleX = attributes.transform.a * 0.8
                 let scaleY = attributes.transform.d * 0.8
-                let scale = CGAffineTransformMakeScale(scaleX, scaleY)
+                let scale = CGAffineTransform(scaleX: scaleX, y: scaleY)
                 
                 let startAttributes = layout.startAttributesList[index]
                 let translateX = ceil(attributes.center.x + attributes.transform.tx - startAttributes.center.x)
                 let translateY = ceil(attributes.center.y - attributes.transform.ty - startAttributes.center.y)
                 
-                let translate = CGAffineTransformMakeTranslation(translateX, translateY)
-                let concat = CGAffineTransformConcat(scale, translate)
+                let translate = CGAffineTransform(translationX: translateX, y: translateY)
+                let concat = scale.concatenating(translate)
                 let transform = CATransform3DMakeAffineTransform(concat)
                 
                 cell.layer.setValue(
-                    NSValue(CATransform3D: transform)
+                    NSValue(caTransform3D: transform)
                     , forKey: "transform"
                 )
             }
         }
     }
     
-    private func hide(transitionContext: UIViewControllerContextTransitioning) {
+    fileprivate func hide(_ transitionContext: UIViewControllerContextTransitioning) {
         guard let (containerView, fromViewController, toViewController) = extractContextInfoFrom(transitionContext) else {
             return
         }
@@ -129,35 +129,35 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             containerView.addSubview(toViewController.view)
             containerView.addSubview(fromViewController.view)
             
-            toViewController.view.hidden = true
+            toViewController.view.isHidden = true
             toViewController.view.frame = containerView.bounds
             
             collectionViewController.view.frame = containerView.bounds
-            collectionViewController.collectionView.transform = CGAffineTransformIdentity
+            collectionViewController.collectionView.transform = CGAffineTransform.identity
         }
         
         do {
-            let viewController = navigationController.viewControllers[selectedIndexPath.item]
+            let viewController = navigationController.viewControllers[(selectedIndexPath as NSIndexPath).item]
             navigationController.popToViewController(viewController, animated: false)
         }
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: UIViewAnimationOptions(), animations: {
             collectionViewController.collectionView.layout.attributesList.forEach { attributes in
-                guard selectedIndexPath.item == attributes.indexPath.item else {
+                guard (selectedIndexPath as NSIndexPath).item == (attributes.indexPath as NSIndexPath).item else {
                     return
                 }
                 
-                guard let cell = collectionViewController.collectionView.cellForItemAtIndexPath(attributes.indexPath) else {
+                guard let cell = collectionViewController.collectionView.cellForItem(at: attributes.indexPath) else {
                     return
                 }
                 
                 attributes.zIndex = collectionViewController.collectionView.layout.attributesList.count
-                collectionViewController.collectionView.bringSubviewToFront(cell)
+                collectionViewController.collectionView.bringSubview(toFront: cell)
             }
             
             let scale = 1 / CustomLayout.adjustCellSize
-            collectionViewController.collectionView.transform = CGAffineTransformMakeScale(scale, scale)
+            collectionViewController.collectionView.transform = CGAffineTransform(scaleX: scale, y: scale)
         }) { finished in
-            toViewController.view.hidden = false
+            toViewController.view.isHidden = false
             fromViewController.view.removeFromSuperview()
             transitionContext.completeTransition(true)
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UINavigationController {
-    public func presentHistory(backgroundView: UIView? = nil) {
+    public func presentHistory(_ backgroundView: UIView? = nil) {
         fatalError()
     }
 }

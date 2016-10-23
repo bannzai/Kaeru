@@ -12,8 +12,8 @@ class LayoutAttributes: UICollectionViewLayoutAttributes {
     var progress: CGFloat = 0
     var isLast: Bool = false
     
-    override func copyWithZone(zone: NSZone) -> AnyObject {
-        guard let attributes = super.copyWithZone(zone) as? LayoutAttributes else {
+    override func copy(with zone: NSZone?) -> Any {
+        guard let attributes = super.copy(with: zone) as? LayoutAttributes else {
             fatalError()
         }
         attributes.progress = progress
@@ -28,7 +28,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var blurView: UIVisualEffectView!
     
     static func nib() -> UINib {
-        return UINib(nibName: className, bundle: NSBundle(forClass: CollectionViewCell.self))
+        return UINib(nibName: className, bundle: Bundle(for: CollectionViewCell.self))
     }
     
     override func awakeFromNib() {
@@ -40,10 +40,10 @@ class CollectionViewCell: UICollectionViewCell {
         
         configureSnapShotLayer()
         
-        backgroundColor = .clearColor()
-        contentView.backgroundColor = .clearColor()
+        backgroundColor = .clear()
+        contentView.backgroundColor = .clear()
         
-        imageView.hidden = false
+        imageView.isHidden = false
         blurView.alpha = 0
     }
     
@@ -51,8 +51,8 @@ class CollectionViewCell: UICollectionViewCell {
         imageView.image = image
     }
     
-    override func applyLayoutAttributes(layoutAttributes: UICollectionViewLayoutAttributes) {
-        super.applyLayoutAttributes(layoutAttributes)
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
         
         guard let attributes = layoutAttributes as? LayoutAttributes else {
             return
