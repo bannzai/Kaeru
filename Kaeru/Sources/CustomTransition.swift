@@ -69,7 +69,7 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             collectionViewController.collectionView.layout.isTransitioning = false
         }
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 1, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: UIViewAnimationOptions(), animations: {
             fromViewController.view.isHidden = true
             self.appearAnimation(collectionViewController)
         }) { finished in
