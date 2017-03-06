@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Kaeru'
-  s.version = '1.1.1'
+  s.version = '1.1.2'
   s.license = 'MIT'
   s.homepage = 'https://github.com/bannzai/'
   s.summary = 'Switch viewcontroller like ios task manager'
