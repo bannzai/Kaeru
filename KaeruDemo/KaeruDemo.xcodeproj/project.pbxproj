@@ -26,6 +26,7 @@
 		6CC8B17D1E715184003DCE8D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8B1751E715184003DCE8D /* Helper.swift */; };
 		6CC8B17E1E715184003DCE8D /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8B1761E715184003DCE8D /* HistoryNavigationController.swift */; };
 		6CC8B17F1E715184003DCE8D /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8B1771E715184003DCE8D /* UINavigationControllerExtension.swift */; };
+		6CC8B1811E7155F5003DCE8D /* HistoryNavigationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8B1801E7155F5003DCE8D /* HistoryNavigationContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		6CC8B1751E715184003DCE8D /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6CC8B1761E715184003DCE8D /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 		6CC8B1771E715184003DCE8D /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		6CC8B1801E7155F5003DCE8D /* HistoryNavigationContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				6CC8B1741E715184003DCE8D /* CustomTransition.swift */,
 				6CC8B1751E715184003DCE8D /* Helper.swift */,
 				6CC8B1761E715184003DCE8D /* HistoryNavigationController.swift */,
+				6CC8B1801E7155F5003DCE8D /* HistoryNavigationContainerView.swift */,
 				6CC8B1771E715184003DCE8D /* UINavigationControllerExtension.swift */,
 			);
 			name = Sources;
@@ -316,6 +319,7 @@
 				6CC8B16C1E71504F003DCE8D /* DemoHelper.swift in Sources */,
 				6CC8B16B1E71504F003DCE8D /* DetailViewController.swift in Sources */,
 				6CC8B17C1E715184003DCE8D /* CustomTransition.swift in Sources */,
+				6CC8B1811E7155F5003DCE8D /* HistoryNavigationContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

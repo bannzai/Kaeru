@@ -11,6 +11,15 @@ import UIKit
 open class HistoryNavigationController: UINavigationController {
     fileprivate var snapShots = [UIImage]()
     
+    open override func loadView() {
+        let containerView = HistoryNavigationContainerView()
+        view = containerView
+    }
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     // MARK: - Interface
     open override func presentHistory(_ backgroundView: UIView? = nil) {
         if snapShots.isEmpty {
