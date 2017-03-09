@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Kaeru" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="327"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="497" height="327"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-31-ClP">
+                        <rect key="frame" x="0.0" y="0.0" width="497" height="327"/>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjn-xl-v02">
+                        <rect key="frame" x="0.0" y="0.0" width="497" height="327"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XsN-4q-XjR">
+                            <rect key="frame" x="0.0" y="0.0" width="497" height="327"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnW-iM-l4j">
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="VpC-2h-IRy">
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </view>
+                                    <vibrancyEffect>
+                                        <blurEffect style="light"/>
+                                    </vibrancyEffect>
+                                </visualEffectView>
+                            </subviews>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Sjn-xl-v02" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NdV-om-d4c"/>
+                <constraint firstAttribute="bottom" secondItem="i1K-31-ClP" secondAttribute="bottom" id="SZD-M5-Lkv"/>
+                <constraint firstAttribute="trailing" secondItem="i1K-31-ClP" secondAttribute="trailing" id="Tiz-bQ-8cB"/>
+                <constraint firstItem="i1K-31-ClP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cWd-PR-rMz"/>
+                <constraint firstAttribute="bottom" secondItem="Sjn-xl-v02" secondAttribute="bottom" id="cdY-jN-RKF"/>
+                <constraint firstItem="Sjn-xl-v02" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mX1-fz-Gn5"/>
+                <constraint firstAttribute="trailing" secondItem="Sjn-xl-v02" secondAttribute="trailing" id="sSp-Fm-Kas"/>
+                <constraint firstItem="i1K-31-ClP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uQU-6J-Ogr"/>
+            </constraints>
+            <size key="customSize" width="497" height="327"/>
+            <connections>
+                <outlet property="blurView" destination="Sjn-xl-v02" id="6hf-Re-jd1"/>
+                <outlet property="imageView" destination="i1K-31-ClP" id="y8u-Rt-sEz"/>
+            </connections>
+            <point key="canvasLocation" x="460.5" y="191.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
