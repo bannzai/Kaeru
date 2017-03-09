@@ -37,9 +37,22 @@ internal extension UIImage {
     }		
 }		
 
-
-
-
+internal extension UIView {
+    func addWholeConstraint(_ view: UIView) {
+        [.top, .bottom, .left, .right].forEach {
+            NSLayoutConstraint(
+                item: self,
+                attribute: $0,
+                relatedBy: .equal,
+                toItem: view,
+                attribute: $0,
+                multiplier: 1,
+                constant: 0)
+                .isActive = true
+        }
+    }
+    
+}
 class DetailViewController: UIViewController {
     class func instance() -> DetailViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -69,26 +82,22 @@ class DetailViewController: UIViewController {
             .reduce("")
             { $0 + $1 + "\n" }
         
-        setupBlurImagesInBackground()
     }
     
-    
-    fileprivate func setupBlurImagesInBackground() {
-        DispatchQueue.global().async {
-            let blurImage = self.image?.blur(10)
-            DispatchQueue.main.async {
-                self.blurImage = blurImage
-            }
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @IBAction func showHIstoryPressed(_ sender: AnyObject) {
-        guard let blurImage = blurImage else {
-            navigationController?.presentHistory()
-            return
-        }
-        let imageView = UIImageView(image: blurImage)
+        let effect = UIBlurEffect(style: .light)
+        let effectView = UIVisualEffectView(effect: effect)
+        let imageView = UIImageView(image: image)
         imageView.clipsToBounds = true
+        imageView.frame = UIScreen.main.bounds
+        effectView.frame = UIScreen.main.bounds
+        effectView.alpha = 0.7
+        imageView.addSubview(effectView)
+        effectView.addWholeConstraint(imageView)
         navigationController?.presentHistory(imageView)
     }
     

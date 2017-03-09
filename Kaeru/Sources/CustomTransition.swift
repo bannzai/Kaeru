@@ -104,8 +104,8 @@ final class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 let transform = CATransform3DMakeAffineTransform(concat)
                 
                 cell.layer.setValue(
-                    NSValue(caTransform3D: transform)
-                    , forKey: "transform"
+                    NSValue(caTransform3D: transform),
+                    forKey: "transform"
                 )
             }
         }
