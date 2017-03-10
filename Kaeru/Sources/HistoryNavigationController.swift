@@ -13,6 +13,7 @@ open class HistoryNavigationController: UINavigationController {
     
     open override func loadView() {
         let containerView = HistoryNavigationContainerView()
+        containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view = containerView
     }
     
